@@ -1,0 +1,10 @@
+# Credenziali locali — NON caricare mai su GitHub
+config.env
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python

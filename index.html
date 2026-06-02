@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="900">
+<title>Market Pulse</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold:    #d4a843;
+    --green:   #00d97e;
+    --red:     #ff4d4f;
+    --bg:      #0a0a0a;
+    --surface: #111111;
+    --border:  #222222;
+    --text:    #e8e8e8;
+    --muted:   #666666;
+    --dim:     #333333;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IM Fell English', Georgia, serif;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  /* Subtle grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(212,168,67,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,168,67,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 16px 48px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border: 1px solid var(--border);
+    border-bottom: 3px solid var(--gold);
+    padding: 28px 28px 24px;
+    background: var(--surface);
+    margin-bottom: 3px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: 'MARKET PULSE';
+    position: absolute;
+    right: -20px;
+    bottom: -14px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 60px;
+    color: rgba(212,168,67,0.04);
+    pointer-events: none;
+    white-space: nowrap;
+    letter-spacing: 4px;
+  }
+  .header-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .header-title {
+    font-size: 28px;
+    font-weight: normal;
+    color: #f0f0f0;
+    line-height: 1.2;
+  }
+  .header-date {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 6px;
+    text-transform: capitalize;
+  }
+
+  /* ── AI COMMENTARY ── */
+  .commentary {
+    background: #0e0e0e;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    padding: 18px 22px;
+    margin-bottom: 3px;
+  }
+  .commentary-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .commentary-text {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #cccccc;
+    font-style: italic;
+  }
+
+  /* ── MARKET TABLE ── */
+  .market-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0 20px 16px;
+    margin-bottom: 3px;
+  }
+  .category-header {
+    padding: 18px 0 6px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--dim);
+  }
+  .asset-row {
+    display: grid;
+    grid-template-columns: 36px 1fr auto 88px auto;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid #161616;
+    transition: background 0.15s;
+  }
+  .asset-row:hover { background: rgba(255,255,255,0.02); margin: 0 -8px; padding: 12px 8px; }
+  .asset-row:last-child { border-bottom: none; }
+
+  .asset-emoji  { font-size: 20px; text-align: center; }
+  .asset-name   { font-family: 'IM Fell English', serif; font-size: 14px; color: #e0e0e0; font-weight: 600; }
+  .asset-price  { font-family: 'Share Tech Mono', monospace; font-size: 13px; color: #bbb; text-align: right; white-space: nowrap; }
+  .asset-spark  { display: flex; align-items: center; justify-content: center; }
+  .asset-pcts   { text-align: right; }
+
+  .pct {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    display: block;
+  }
+  .pct.day   { font-size: 13px; }
+  .pct.week,
+  .pct.month { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .pct.up    { color: var(--green); }
+  .pct.down  { color: var(--red); }
+  .pct.flat  { color: var(--muted); }
+
+  /* ── LEGEND ── */
+  .legend {
+    background: var(--bg);
+    border: 1px solid #1a1a1a;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .legend-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--dim);
+    letter-spacing: 0.5px;
+  }
+  .legend-text span.up   { color: var(--green); }
+  .legend-text span.down { color: var(--red); }
+
+  .refresh-btn {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    background: none;
+    border: 1px solid var(--dim);
+    padding: 5px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .refresh-btn:hover { border-color: var(--gold); }
+
+  /* ── LOADING STATE ── */
+  .loading-state {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--muted);
+  }
+  .loading-dot {
+    display: inline-block;
+    animation: blink 1.2s step-end infinite;
+  }
+  .loading-dot:nth-child(2) { animation-delay: 0.4s; }
+  .loading-dot:nth-child(3) { animation-delay: 0.8s; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 480px) {
+    .asset-row { grid-template-columns: 28px 1fr auto 60px auto; gap: 4px; }
+    .asset-name { font-size: 12px; }
+    .asset-price { font-size: 11px; }
+    .header-title { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-tag">◈ Market Pulse</div>
+    <div class="header-title" id="session-title">Caricamento…</div>
+    <div class="header-date" id="report-date">—</div>
+  </div>
+
+  <div class="commentary">
+    <div class="commentary-tag">◈ Analisi AI</div>
+    <div class="commentary-text" id="commentary-text">
+      In attesa del prossimo report automatico. La web app viene aggiornata
+      automaticamente alle 09:30 e alle 15:00 nei giorni feriali.
+    </div>
+  </div>
+
+  <div class="market-section" id="market-table">
+    <div class="loading-state">
+      CARICAMENTO DATI
+      <span class="loading-dot">.</span>
+      <span class="loading-dot">.</span>
+      <span class="loading-dot">.</span>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-text">
+      <span class="up">▲</span> rialzo &nbsp;|&nbsp;
+      <span class="down">▼</span> ribasso &nbsp;|&nbsp;
+      sparkline = ultimi 20 gg &nbsp;|&nbsp;
+      fonte: Yahoo Finance
+    </div>
+    <button class="refresh-btn" onclick="location.reload()">↻ Aggiorna</button>
+  </div>
+
+</div>
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────────────────────
+const ASSETS = [
+  { symbol: "^GSPC",    name: "S&P 500",      category: "📈 Azioni & ETF",      emoji: "🇺🇸" },
+  { symbol: "IWDA.AS",  name: "MSCI World",   category: "📈 Azioni & ETF",      emoji: "🌍" },
+  { symbol: "EIMI.AS",  name: "EIMI EM",      category: "📈 Azioni & ETF",      emoji: "🌏" },
+  { symbol: "XDWT.DE",  name: "XDWT Tech",    category: "📈 Azioni & ETF",      emoji: "💻" },
+  { symbol: "CL=F",     name: "Petrolio WTI", category: "🏭 Materie Prime",      emoji: "🛢️" },
+  { symbol: "GC=F",     name: "Oro",          category: "🏭 Materie Prime",      emoji: "🥇" },
+  { symbol: "SI=F",     name: "Argento",      category: "🏭 Materie Prime",      emoji: "🥈" },
+  { symbol: "BTC-USD",  name: "Bitcoin",      category: "🔗 Crypto",            emoji: "₿"  },
+  { symbol: "SOL-USD",  name: "Solana",       category: "🔗 Crypto",            emoji: "◎"  },
+  { symbol: "EURUSD=X", name: "EUR/USD",      category: "💱 Forex & Macro",     emoji: "💶" },
+  { symbol: "^TNX",     name: "Bond US 10Y",  category: "💱 Forex & Macro",     emoji: "📊" },
+];
+
+const PROXY = "https://query1.finance.yahoo.com/v8/finance/chart/";
+
+// ── FETCH ────────────────────────────────────────────────────────────────────
+async function fetchQuote(symbol) {
+  const url = `${PROXY}${encodeURIComponent(symbol)}?interval=1d&range=1mo`;
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(r.status);
+    const data = await r.json();
+    const result = data.chart.result[0];
+    const meta   = result.meta;
+    const closes = result.indicators.quote[0].close.filter(c => c !== null);
+    if (closes.length < 2) return null;
+
+    const current   = meta.regularMarketPrice ?? closes.at(-1);
+    const prevDay   = closes.at(-2);
+    const weekAgo   = closes.length >= 6 ? closes.at(-6) : closes[0];
+    const monthAgo  = closes[0];
+    const pct = (a, b) => b ? +((a - b) / b * 100).toFixed(2) : 0;
+
+    return {
+      symbol, current,
+      currency:   meta.currency || "",
+      dayPct:     pct(current, prevDay),
+      weekPct:    pct(current, weekAgo),
+      monthPct:   pct(current, monthAgo),
+      history:    closes.slice(-20),
+    };
+  } catch(e) {
+    console.warn(`Failed ${symbol}:`, e);
+    return null;
+  }
+}
+
+// ── SPARKLINE ────────────────────────────────────────────────────────────────
+function sparkline(history, w=80, h=28) {
+  if (!history || history.length < 2) return "";
+  const mn = Math.min(...history), mx = Math.max(...history);
+  const rng = mx - mn || 1;
+  const pts = history.map((v, i) => {
+    const x = (i / (history.length - 1) * w).toFixed(1);
+    const y = ((1 - (v - mn) / rng) * h).toFixed(1);
+    return `${x},${y}`;
+  }).join(" ");
+  const color = history.at(-1) >= history[0] ? "#00d97e" : "#ff4d4f";
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.8" stroke-linejoin="round"/>
+  </svg>`;
+}
+
+// ── RENDER ───────────────────────────────────────────────────────────────────
+function pctClass(v) { return v === null ? "flat" : v > 0 ? "up" : v < 0 ? "down" : "flat"; }
+function pctArrow(v, label="") {
+  if (v === null) return `<span class="pct flat">– ${label}</span>`;
+  const arrow = v > 0 ? "▲" : v < 0 ? "▼" : "→";
+  const sign  = v > 0 ? "+" : "";
+  return `<span class="pct ${pctClass(v)} ${label ? label.toLowerCase() : 'day'}">${arrow} ${sign}${v.toFixed(2)}% <small style="color:#333">${label}</small></span>`;
+}
+
+function formatPrice(val, currency) {
+  if (val === null || val === undefined) return "N/D";
+  if (val > 10000) return `${val.toLocaleString("it-IT", {maximumFractionDigits:0})} ${currency}`;
+  if (val > 100)   return `${val.toLocaleString("it-IT", {minimumFractionDigits:2,maximumFractionDigits:2})} ${currency}`;
+  return `${val.toFixed(4)} ${currency}`;
+}
+
+function render(results) {
+  // Update header
+  const now = new Date();
+  const session = now.getHours() < 13 ? "🌅 Apertura Mercati" : "🌆 Chiusura Mercati";
+  document.getElementById("session-title").textContent = session;
+  document.getElementById("report-date").textContent = now.toLocaleString("it-IT", {
+    weekday:"long", day:"2-digit", month:"long", year:"numeric", hour:"2-digit", minute:"2-digit"
+  });
+
+  // Group by category
+  const groups = {};
+  ASSETS.forEach((asset, i) => {
+    const cat = asset.category;
+    if (!groups[cat]) groups[cat] = [];
+    groups[cat].push({ ...asset, data: results[i] });
+  });
+
+  let html = "";
+  for (const [cat, items] of Object.entries(groups)) {
+    html += `<div class="category-header">${cat}</div>`;
+    items.forEach(({ name, emoji, data }) => {
+      const price = data ? formatPrice(data.current, data.currency) : "N/D";
+      html += `
+      <div class="asset-row">
+        <div class="asset-emoji">${emoji}</div>
+        <div class="asset-name">${name}</div>
+        <div class="asset-price">${price}</div>
+        <div class="asset-spark">${data ? sparkline(data.history) : ""}</div>
+        <div class="asset-pcts">
+          ${pctArrow(data?.dayPct ?? null, "")}
+          ${pctArrow(data?.weekPct ?? null, "7d")}
+          ${pctArrow(data?.monthPct ?? null, "30d")}
+        </div>
+      </div>`;
+    });
+  }
+  document.getElementById("market-table").innerHTML = html;
+}
+
+// ── INIT ─────────────────────────────────────────────────────────────────────
+(async () => {
+  const results = await Promise.all(ASSETS.map(a => fetchQuote(a.symbol)));
+  render(results);
+
+  // Commentary: if generated by Python script it's already baked in.
+  // For live web app we show a placeholder unless the script has injected it.
+  const commentaryEl = document.getElementById("commentary-text");
+  if (commentaryEl.dataset.ai !== "true") {
+    const upCount   = results.filter(r => r?.dayPct > 0).length;
+    const downCount = results.filter(r => r?.dayPct < 0).length;
+    const total = upCount + downCount || 1;
+    const mood  = upCount > downCount ? "prevalentemente positiva" : upCount < downCount ? "in calo generalizzato" : "mista";
+    commentaryEl.textContent = `Sessione ${mood}: ${upCount}/${total} asset in rialzo oggi. Commento AI dettagliato disponibile nell'email del report.`;
+  }
+})();
+</script>
+</body>
+</html>
