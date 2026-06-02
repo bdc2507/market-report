@@ -21,7 +21,7 @@ ASSETS = [
     # Equities / ETF
     {"symbol": "^GSPC",   "name": "S&P 500",       "category": "equity",    "emoji": "🇺🇸"},
     {"symbol": "IWDA.AS", "name": "MSCI World",     "category": "equity",    "emoji": "🌍"},
-    {"symbol": "EIMI.AS", "name": "EIMI EM",        "category": "equity",    "emoji": "🌏"},
+    {"symbol": "EIMI.MI", "name": "EIMI EM",        "category": "equity",    "emoji": "🌏"},
     {"symbol": "XDWT.DE", "name": "XDWT Tech",      "category": "equity",    "emoji": "💻"},
     # Commodities
     {"symbol": "CL=F",    "name": "Petrolio WTI",   "category": "commodity", "emoji": "🛢️"},
