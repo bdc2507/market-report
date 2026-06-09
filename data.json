@@ -1,5 +1,5 @@
 {
-  "generated_at": "Tuesday 09 June 2026 – 20:58",
+  "generated_at": "Tuesday 09 June 2026 – 21:42",
   "session": "chiusura",
   "commentary": "Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.",
   "assets": [
@@ -26,15 +26,15 @@
       "month_pct": 0.77
     },
     {
-      "symbol": "EIMI.AS",
-      "name": "EIMI EM",
+      "symbol": "EIMI.MI",
+      "name": "EIMI MI",
       "category": "equity",
       "emoji": "🌏",
-      "current": null,
-      "currency": "",
-      "day_pct": null,
-      "week_pct": null,
-      "month_pct": null
+      "current": 46.1,
+      "currency": "EUR",
+      "day_pct": -0.77,
+      "week_pct": -6.84,
+      "month_pct": -2.35
     },
     {
       "symbol": "XDWT.DE",
@@ -63,10 +63,10 @@
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4284.6,
+      "current": 4284.8,
       "currency": "USD",
       "day_pct": -1.18,
-      "week_pct": -4.56,
+      "week_pct": -4.55,
       "month_pct": -9.2
     },
     {
@@ -74,44 +74,44 @@
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 65.5,
+      "current": 65.46,
       "currency": "USD",
-      "day_pct": -4.27,
-      "week_pct": -13.03,
-      "month_pct": -23.38
+      "day_pct": -4.33,
+      "week_pct": -13.08,
+      "month_pct": -23.43
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 62074.65,
+      "current": 61820.66,
       "currency": "USD",
-      "day_pct": -1.61,
-      "week_pct": -2.71,
-      "month_pct": -23.05
+      "day_pct": -2.01,
+      "week_pct": -3.1,
+      "month_pct": -23.36
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 65.54,
+      "current": 65.04,
       "currency": "USD",
-      "day_pct": -1.88,
-      "week_pct": -4.63,
-      "month_pct": -29.64
+      "day_pct": -2.63,
+      "week_pct": -5.35,
+      "month_pct": -30.17
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1546,
+      "current": 1.1543,
       "currency": "USD",
-      "day_pct": 0.15,
-      "week_pct": -0.65,
-      "month_pct": -1.89
+      "day_pct": 0.13,
+      "week_pct": -0.68,
+      "month_pct": -1.92
     },
     {
       "symbol": "^TNX",
