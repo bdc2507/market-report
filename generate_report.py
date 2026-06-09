@@ -21,7 +21,7 @@ ASSETS = [
     # Equities / ETF
     {"symbol": "^GSPC",   "name": "S&P 500",       "category": "equity",    "emoji": "🇺🇸"},
     {"symbol": "IWDA.AS", "name": "MSCI World",     "category": "equity",    "emoji": "🌍"},
-    {"symbol": "EIMI.MI", "name": "EIMI EM",        "category": "equity",    "emoji": "🌏"},
+    {"symbol": "EIMI.AS", "name": "EIMI EM",        "category": "equity",    "emoji": "🌏"},
     {"symbol": "XDWT.DE", "name": "XDWT Tech",      "category": "equity",    "emoji": "💻"},
     # Commodities
     {"symbol": "CL=F",    "name": "Petrolio WTI",   "category": "commodity", "emoji": "🛢️"},
@@ -143,10 +143,10 @@ Scrivi UN commento di massimo 3 frasi (80 parole max) in italiano, come se lo sp
 
 # ── HTML GENERATION ────────────────────────────────────────────────────────────
 def pct_color(val):
-    if val is None:   return "#888888"
-    if val > 0:       return "#00d97e"
-    if val < 0:       return "#ff4d4f"
-    return "#aaaaaa"
+    if val is None: return "#888888"
+    if val > 0:     return "#1a7a4a"
+    if val < 0:     return "#c0392b"
+    return "#888888"
 
 def pct_arrow(val):
     if val is None: return "–"
@@ -154,30 +154,12 @@ def pct_arrow(val):
     if val < 0:     return f"▼ {val:.2f}%"
     return f"→ {val:.2f}%"
 
-def sparkline_svg(history, width=80, height=28):
-    if len(history) < 2:
-        return ""
-    mn, mx = min(history), max(history)
-    rng = mx - mn or 1
-    pts = []
-    for i, v in enumerate(history):
-        x = round(i / (len(history) - 1) * width, 1)
-        y = round((1 - (v - mn) / rng) * height, 1)
-        pts.append(f"{x},{y}")
-    color = "#00d97e" if history[-1] >= history[0] else "#ff4d4f"
-    return (
-        f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
-        f'xmlns="http://www.w3.org/2000/svg" style="display:block">'
-        f'<polyline points="{" ".join(pts)}" fill="none" stroke="{color}" stroke-width="1.8" stroke-linejoin="round"/>'
-        f'</svg>'
-    )
-
 CATEGORY_LABELS = {
-    "equity":    "📈 Azioni & ETF",
+    "equity":    "📈 Azioni &amp; ETF",
     "commodity": "🏭 Materie Prime",
     "crypto":    "🔗 Crypto",
-    "forex":     "💱 Forex & Macro",
-    "bond":      "💱 Forex & Macro",
+    "forex":     "💱 Forex &amp; Macro",
+    "bond":      "💱 Forex &amp; Macro",
 }
 
 def build_html_report(market_data, commentary, is_email=True):
@@ -185,43 +167,51 @@ def build_html_report(market_data, commentary, is_email=True):
     session = "🌅 Apertura" if now.hour < 13 else "🌆 Chiusura"
     date_str = now.strftime("%A %d %B %Y – %H:%M")
 
-    # Group by category
     from collections import OrderedDict
     groups = OrderedDict()
     for d in market_data:
-        cat = d["category"]
-        label = CATEGORY_LABELS.get(cat, cat)
+        label = CATEGORY_LABELS.get(d["category"], d["category"])
         groups.setdefault(label, []).append(d)
 
-    # Merge forex & bond under same label
-    rows_html = ""
+    sections_html = ""
     for group_label, items in groups.items():
-        rows_html += f"""
-        <tr>
-          <td colspan="5" style="padding:18px 0 6px 0; font-family:'Courier New',monospace;
-              font-size:11px; letter-spacing:3px; text-transform:uppercase;
-              color:#666; border-bottom:1px solid #222;">
-            {group_label}
-          </td>
-        </tr>"""
+        rows = ""
         for d in items:
             price_str = f"{d['current']:,.4g} {d['currency']}" if d["current"] else "N/D"
-            spark     = sparkline_svg(d.get("history", []))
-            rows_html += f"""
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">{d['emoji']}</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">{d['name']}</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">{price_str}</td>
-          <td style="padding:12px 16px; text-align:center;">{spark}</td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:{pct_color(d['day_pct'])}; font-family:'Courier New',monospace; font-size:12px; display:block;">{pct_arrow(d['day_pct'])}</span>
-            <span style="color:{pct_color(d['week_pct'])}; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">{pct_arrow(d['week_pct'])} <span style="color:#444">7d</span></span>
-            <span style="color:{pct_color(d['month_pct'])}; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">{pct_arrow(d['month_pct'])} <span style="color:#444">30d</span></span>
-          </td>
-        </tr>"""
+            day_col   = pct_color(d["day_pct"])
+            week_col  = pct_color(d["week_pct"])
+            month_col = pct_color(d["month_pct"])
+            rows += f"""
+      <tr style="border-bottom:1px solid #eeeeee;">
+        <td style="padding:13px 8px; font-size:18px; width:30px; text-align:center;">{d['emoji']}</td>
+        <td style="padding:13px 6px;">
+          <div style="font-size:14px; font-weight:600; color:#111111; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:120px;">{d['name']}</div>
+          <div style="font-family:'Courier New',monospace; font-size:11px; color:#888888; margin-top:2px;">{price_str}</div>
+        </td>
+        <td style="padding:13px 6px; text-align:right; white-space:nowrap;">
+          <div style="font-size:17px; font-weight:600; color:{day_col};">{pct_arrow(d['day_pct'])}</div>
+          <div style="font-family:'Courier New',monospace; font-size:11px; margin-top:3px;">
+            <span style="color:{week_col};">{pct_arrow(d['week_pct'])}</span>
+            <span style="color:#aaaaaa;"> 7d</span>
+            &nbsp;
+            <span style="color:{month_col};">{pct_arrow(d['month_pct'])}</span>
+            <span style="color:#aaaaaa;"> 30d</span>
+          </div>
+        </td>
+      </tr>"""
+
+        sections_html += f"""
+    <tr>
+      <td colspan="3" style="padding:14px 8px 5px; font-family:'Courier New',monospace;
+          font-size:10px; letter-spacing:2px; text-transform:uppercase;
+          color:#888888; border-bottom:1px solid #dddddd;">
+        {group_label}
+      </td>
+    </tr>
+    {rows}"""
 
     web_app_link = os.environ.get("WEB_APP_URL", "#")
-    link_section = f'<p style="text-align:center; margin-top:24px;"><a href="{web_app_link}" style="color:#d4a843; font-family:\'Courier New\',monospace; font-size:11px; letter-spacing:2px;">→ APRI WEB APP ←</a></p>' if is_email else ""
+    link_section = f'<p style="text-align:center; margin-top:20px;"><a href="{web_app_link}" style="color:#b8860b; font-family:\'Courier New\',monospace; font-size:11px; letter-spacing:2px;">→ APRI WEB APP ←</a></p>' if is_email else ""
 
     html = f"""<!DOCTYPE html>
 <html lang="it">
@@ -230,48 +220,47 @@ def build_html_report(market_data, commentary, is_email=True):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market Report – {date_str}</title>
 </head>
-<body style="margin:0; padding:0; background:#0d0d0d; font-family:Georgia,serif;">
-<div style="max-width:560px; margin:0 auto; padding:24px 16px;">
+<body style="margin:0; padding:0; background:#f5f5f3; font-family:Arial,sans-serif;">
+<div style="max-width:560px; margin:0 auto; padding:16px;">
 
   <!-- HEADER -->
-  <div style="border:1px solid #2a2a2a; border-bottom:3px solid #d4a843; padding:24px; margin-bottom:2px; background:#111;">
-    <div style="font-family:'Courier New',monospace; font-size:10px; letter-spacing:4px; color:#d4a843; text-transform:uppercase; margin-bottom:8px;">
+  <div style="background:#ffffff; border-bottom:3px solid #b8860b; padding:18px 20px 14px; margin-bottom:3px;">
+    <div style="font-family:'Courier New',monospace; font-size:10px; letter-spacing:3px; color:#b8860b; text-transform:uppercase; margin-bottom:6px;">
       Market Pulse
     </div>
-    <div style="font-family:Georgia,serif; font-size:22px; color:#f0f0f0; font-weight:bold;">
+    <div style="font-size:20px; font-weight:600; color:#111111;">
       {session} Mercati
     </div>
-    <div style="font-family:'Courier New',monospace; font-size:11px; color:#555; margin-top:4px; text-transform:capitalize;">
+    <div style="font-family:'Courier New',monospace; font-size:11px; color:#888888; margin-top:3px; text-transform:capitalize;">
       {date_str}
     </div>
   </div>
 
-  <!-- AI COMMENTARY -->
-  <div style="background:#161616; border:1px solid #2a2a2a; border-left:3px solid #d4a843; padding:18px 20px; margin-bottom:2px;">
-    <div style="font-family:'Courier New',monospace; font-size:9px; letter-spacing:3px; color:#d4a843; margin-bottom:10px; text-transform:uppercase;">
-      ◈ Analisi AI
-    </div>
-    <p style="margin:0; font-family:Georgia,serif; font-size:14px; line-height:1.7; color:#cccccc; font-style:italic;">
-      {commentary}
-    </p>
-  </div>
-
   <!-- MARKET TABLE -->
-  <div style="background:#111; border:1px solid #2a2a2a; padding:8px 20px 16px 20px; margin-bottom:2px;">
+  <div style="background:#ffffff; margin-bottom:3px; padding:0 12px 8px;">
     <table style="width:100%; border-collapse:collapse;">
-      {rows_html}
+      {sections_html}
     </table>
   </div>
 
+  <!-- AI COMMENTARY -->
+  <div style="background:#fffdf5; border-left:3px solid #b8860b; padding:16px 18px; margin-bottom:3px;">
+    <div style="font-family:'Courier New',monospace; font-size:10px; letter-spacing:2px; color:#b8860b; text-transform:uppercase; margin-bottom:8px;">
+      ◈ Analisi AI
+    </div>
+    <p style="margin:0; font-size:14px; line-height:1.7; color:#111111; font-style:italic;">
+      {commentary}
+    </p>
+    {link_section}
+  </div>
+
   <!-- LEGEND -->
-  <div style="background:#0d0d0d; border:1px solid #1a1a1a; padding:12px 20px;">
-    <span style="font-family:'Courier New',monospace; font-size:10px; color:#333; letter-spacing:1px;">
-      <span style="color:#00d97e">▲</span> rialzo &nbsp;|&nbsp;
-      <span style="color:#ff4d4f">▼</span> ribasso &nbsp;|&nbsp;
-      sparkline = ultimi 20 giorni &nbsp;|&nbsp;
+  <div style="padding:10px 12px;">
+    <span style="font-family:'Courier New',monospace; font-size:10px; color:#aaaaaa; letter-spacing:0.5px;">
+      <span style="color:#1a7a4a;">▲</span> rialzo &nbsp;|&nbsp;
+      <span style="color:#c0392b;">▼</span> ribasso &nbsp;|&nbsp;
       dati: Yahoo Finance
     </span>
-    {link_section}
   </div>
 
 </div>
@@ -386,3 +375,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
