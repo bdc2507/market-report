@@ -3,202 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Market Report – Tuesday 09 June 2026 – 16:07</title>
 <meta http-equiv="refresh" content="900">
+<title>Market Pulse</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f5f3; font-family: Arial, sans-serif; min-height: 100vh; }
+  .container { max-width: 560px; margin: 0 auto; padding: 16px 16px 48px; }
+
+  .header { background: #fff; border-bottom: 3px solid #b8860b; padding: 18px 20px 14px; margin-bottom: 3px; }
+  .header-tag { font-family: 'Courier New', monospace; font-size: 10px; letter-spacing: 3px; color: #b8860b; text-transform: uppercase; margin-bottom: 6px; }
+  .header-title { font-size: 20px; font-weight: 600; color: #111; }
+  .header-date { font-family: 'Courier New', monospace; font-size: 11px; color: #888; margin-top: 3px; text-transform: capitalize; }
+
+  .market-section { background: #fff; margin-bottom: 3px; padding: 0 12px 8px; }
+  .category-header { font-family: 'Courier New', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #888; padding: 14px 8px 5px; border-bottom: 1px solid #ddd; }
+
+  .asset-row { display: grid; grid-template-columns: 30px minmax(0,1fr) auto; align-items: center; gap: 8px; padding: 13px 8px; border-bottom: 1px solid #eee; }
+  .asset-row:last-child { border-bottom: none; }
+  .asset-emoji { font-size: 18px; text-align: center; line-height: 1; }
+  .asset-name { font-size: 14px; font-weight: 600; color: #111111; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .asset-price { font-family: 'Courier New', monospace; font-size: 11px; color: #888; margin-top: 2px; }
+  .asset-pcts { text-align: right; }
+  .pct-day { font-size: 17px; font-weight: 600; display: block; line-height: 1.2; white-space: nowrap; }
+  .pct-sub { font-family: 'Courier New', monospace; font-size: 11px; display: block; margin-top: 3px; white-space: nowrap; color: #888; }
+  .up   { color: #1a7a4a; }
+  .down { color: #c0392b; }
+  .flat { color: #888; }
+
+  .commentary { background: #fffdf5; border-left: 3px solid #b8860b; padding: 16px 18px; margin-bottom: 3px; }
+  .commentary-tag { font-family: 'Courier New', monospace; font-size: 10px; letter-spacing: 2px; color: #b8860b; text-transform: uppercase; margin-bottom: 8px; }
+  .commentary-text { font-size: 14px; line-height: 1.7; color: #111; font-style: italic; }
+
+  .legend { padding: 10px 12px; }
+  .legend-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .legend-text { font-family: 'Courier New', monospace; font-size: 10px; color: #aaa; }
+  .refresh-btn { font-family: 'Courier New', monospace; font-size: 10px; letter-spacing: 1px; color: #b8860b; background: none; border: 1px solid #ddd; padding: 5px 12px; cursor: pointer; text-transform: uppercase; }
+  .refresh-btn:hover { border-color: #b8860b; }
+
+  @media (max-width: 400px) {
+    .asset-row { grid-template-columns: 26px minmax(0,1fr) auto; gap: 5px; }
+    .pct-day { font-size: 15px; }
+    .pct-sub { font-size: 10px; }
+  }
+</style>
 </head>
-<body style="margin:0; padding:0; background:#0d0d0d; font-family:Georgia,serif;">
-<div style="max-width:560px; margin:0 auto; padding:24px 16px;">
+<body>
+<div class="container">
 
-  <!-- HEADER -->
-  <div style="border:1px solid #2a2a2a; border-bottom:3px solid #d4a843; padding:24px; margin-bottom:2px; background:#111;">
-    <div style="font-family:'Courier New',monospace; font-size:10px; letter-spacing:4px; color:#d4a843; text-transform:uppercase; margin-bottom:8px;">
-      Market Pulse
-    </div>
-    <div style="font-family:Georgia,serif; font-size:22px; color:#f0f0f0; font-weight:bold;">
-      🌆 Chiusura Mercati
-    </div>
-    <div style="font-family:'Courier New',monospace; font-size:11px; color:#555; margin-top:4px; text-transform:capitalize;">
-      Tuesday 09 June 2026 – 16:07
+  <div class="header">
+    <div class="header-tag">◈ Market Pulse</div>
+    <div class="header-title" id="session-title">Caricamento…</div>
+    <div class="header-date" id="report-date">—</div>
+  </div>
+
+  <div class="market-section" id="market-table">
+    <div style="text-align:center; padding:40px; font-family:'Courier New',monospace; font-size:12px; letter-spacing:2px; color:#aaa;">
+      CARICAMENTO DATI…
     </div>
   </div>
 
-  <!-- AI COMMENTARY -->
-  <div style="background:#161616; border:1px solid #2a2a2a; border-left:3px solid #d4a843; padding:18px 20px; margin-bottom:2px;">
-    <div style="font-family:'Courier New',monospace; font-size:9px; letter-spacing:3px; color:#d4a843; margin-bottom:10px; text-transform:uppercase;">
-      ◈ Analisi AI
+  <div class="commentary">
+    <div class="commentary-tag">◈ Analisi AI</div>
+    <div class="commentary-text" id="commentary-text">
+      La web app si aggiorna automaticamente alle 09:30 e alle 15:00 nei giorni feriali.
     </div>
-    <p style="margin:0; font-family:Georgia,serif; font-size:14px; line-height:1.7; color:#cccccc; font-style:italic;">
-      Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.
-    </p>
   </div>
 
-  <!-- MARKET TABLE -->
-  <div style="background:#111; border:1px solid #2a2a2a; padding:8px 20px 16px 20px; margin-bottom:2px;">
-    <table style="width:100%; border-collapse:collapse;">
-      
-        <tr>
-          <td colspan="5" style="padding:18px 0 6px 0; font-family:'Courier New',monospace;
-              font-size:11px; letter-spacing:3px; text-transform:uppercase;
-              color:#666; border-bottom:1px solid #222;">
-            📈 Azioni & ETF
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">🇺🇸</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">S&P 500</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">7,300 USD</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,18.9 4.2,15.0 8.4,9.8 12.6,18.2 16.8,18.7 21.1,23.2 25.3,16.0 29.5,14.9 33.7,12.3 37.9,8.2 42.1,8.1 46.3,4.2 50.5,2.7 54.7,0.9 58.9,0.0 63.2,5.1 67.4,2.3 71.6,20.5 75.8,18.5 80.0,28.0" fill="none" stroke="#ff4d4f" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -1.42%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -4.06% <span style="color:#444">7d</span></span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -1.52% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">🌍</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">MSCI World</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">120.8 EUR</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,27.1 4.2,16.1 8.4,23.1 12.6,27.4 16.8,28.0 21.1,20.4 25.3,19.4 29.5,10.2 33.7,5.3 37.9,8.3 42.1,9.8 46.3,7.9 50.5,6.4 54.7,3.9 58.9,0.0 63.2,2.7 67.4,2.9 71.6,6.7 75.8,11.5 80.0,24.1" fill="none" stroke="#00d97e" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -1.47%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -2.77% <span style="color:#444">7d</span></span>
-            <span style="color:#00d97e; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▲ +0.77% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">🌏</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">EIMI EM</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">46.1 EUR</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,16.8 4.2,14.4 8.4,22.4 12.6,24.5 16.8,28.0 21.1,22.6 25.3,22.0 29.5,18.0 33.7,13.0 37.9,10.5 42.1,10.2 46.3,9.5 50.5,9.4 54.7,3.3 58.9,0.0 63.2,3.5 67.4,7.7 71.6,18.3 75.8,18.8 80.0,21.1" fill="none" stroke="#ff4d4f" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -0.77%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -6.84% <span style="color:#444">7d</span></span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -2.35% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">💻</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">XDWT Tech</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">118.3 EUR</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,26.5 4.2,20.1 8.4,22.1 12.6,27.2 16.8,28.0 21.1,23.5 25.3,23.2 29.5,18.4 33.7,16.3 37.9,15.8 42.1,18.4 46.3,14.4 50.5,10.5 54.7,3.5 58.9,0.0 63.2,1.5 67.4,6.8 71.6,13.4 75.8,13.3 80.0,22.6" fill="none" stroke="#00d97e" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -3.79%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -8.71% <span style="color:#444">7d</span></span>
-            <span style="color:#00d97e; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▲ +1.84% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="5" style="padding:18px 0 6px 0; font-family:'Courier New',monospace;
-              font-size:11px; letter-spacing:3px; text-transform:uppercase;
-              color:#666; border-bottom:1px solid #222;">
-            🏭 Materie Prime
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">🛢️</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">Petrolio WTI</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">86.83 USD</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,8.3 4.2,9.8 8.4,9.6 12.6,4.2 16.8,0.0 21.1,1.1 25.3,13.3 29.5,15.8 33.7,15.5 37.9,18.9 42.1,25.6 46.3,25.3 50.5,27.3 54.7,21.2 58.9,19.1 63.2,16.2 67.4,20.0 71.6,23.2 75.8,22.3 80.0,28.0" fill="none" stroke="#ff4d4f" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -4.90%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -7.39% <span style="color:#444">7d</span></span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -11.46% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">🥇</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">Oro</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">4,298 USD</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,1.4 4.2,0.0 8.4,1.4 12.6,10.0 16.8,10.2 21.1,13.4 25.3,11.7 29.5,11.1 33.7,12.4 37.9,13.8 42.1,17.5 46.3,13.9 50.5,9.6 54.7,15.6 58.9,14.6 63.2,18.3 67.4,15.6 71.6,25.3 75.8,25.4 80.0,28.0" fill="none" stroke="#ff4d4f" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -0.86%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -4.25% <span style="color:#444">7d</span></span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -8.91% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">🥈</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">Argento</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">65.38 USD</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,4.5 4.2,0.0 8.4,4.7 12.6,14.0 16.8,14.1 21.1,16.7 25.3,15.5 29.5,14.9 33.7,15.5 37.9,15.0 42.1,17.0 46.3,15.8 50.5,15.8 54.7,16.5 58.9,16.2 63.2,18.4 67.4,18.0 71.6,23.8 75.8,24.4 80.0,28.0" fill="none" stroke="#ff4d4f" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -4.45%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -13.19% <span style="color:#444">7d</span></span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -23.52% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="5" style="padding:18px 0 6px 0; font-family:'Courier New',monospace;
-              font-size:11px; letter-spacing:3px; text-transform:uppercase;
-              color:#666; border-bottom:1px solid #222;">
-            🔗 Crypto
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">₿</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">Bitcoin</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">6.094e+04 USD</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,0.0 4.2,3.4 8.4,1.5 12.6,0.9 16.8,0.4 21.1,2.9 25.3,5.4 29.5,6.7 33.7,7.0 37.9,6.4 42.1,6.6 46.3,10.4 50.5,18.2 54.7,22.7 58.9,23.1 63.2,27.9 67.4,28.0 71.6,24.0 75.8,24.3 80.0,27.9" fill="none" stroke="#ff4d4f" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -3.41%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -4.49% <span style="color:#444">7d</span></span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -24.46% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">◎</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">Solana</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">64.07 USD</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,0.0 4.2,3.2 8.4,1.7 12.6,2.1 16.8,2.4 21.1,4.0 25.3,5.4 29.5,5.8 33.7,5.9 37.9,5.2 42.1,5.4 46.3,6.8 50.5,14.6 54.7,17.4 58.9,20.7 63.2,26.5 67.4,28.0 71.6,23.4 75.8,22.8 80.0,25.9" fill="none" stroke="#ff4d4f" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -4.08%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -6.77% <span style="color:#444">7d</span></span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -31.22% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="5" style="padding:18px 0 6px 0; font-family:'Courier New',monospace;
-              font-size:11px; letter-spacing:3px; text-transform:uppercase;
-              color:#666; border-bottom:1px solid #222;">
-            💱 Forex & Macro
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">💶</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">EUR/USD</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">1.156 USD</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,0.0 4.2,2.6 8.4,9.7 12.6,15.9 16.8,10.6 21.1,16.9 25.3,14.5 29.5,15.0 33.7,12.3 37.9,12.9 42.1,13.0 46.3,15.5 50.5,10.9 54.7,11.4 58.9,13.1 63.2,14.9 67.4,16.6 71.6,16.2 75.8,28.0 80.0,23.3" fill="none" stroke="#ff4d4f" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#00d97e; font-family:'Courier New',monospace; font-size:12px; display:block;">▲ +0.31%</span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -0.67% <span style="color:#444">7d</span></span>
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▼ -1.79% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-        <tr style="border-bottom:1px solid #1a1a1a;">
-          <td style="padding:12px 8px; font-size:20px; width:36px;">📊</td>
-          <td style="padding:12px 4px; font-family:'Georgia',serif; font-size:14px; color:#e8e8e8; font-weight:600;">Bond US 10Y</td>
-          <td style="padding:12px 8px; font-family:'Courier New',monospace; font-size:13px; color:#ccc; text-align:right; white-space:nowrap;">4.54 USD</td>
-          <td style="padding:12px 16px; text-align:center;"><svg width="80" height="28" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="display:block"><polyline points="0.0,26.7 4.2,24.3 8.4,27.0 12.6,9.4 16.8,5.8 21.1,0.0 25.3,12.4 29.5,10.6 33.7,14.3 37.9,22.8 42.1,24.3 46.3,27.7 50.5,28.0 54.7,25.1 58.9,27.7 63.2,23.0 67.4,24.9 71.6,17.1 75.8,15.0 80.0,16.6" fill="none" stroke="#00d97e" stroke-width="1.8" stroke-linejoin="round"/></svg></td>
-          <td style="padding:12px 4px; text-align:right; white-space:nowrap;">
-            <span style="color:#ff4d4f; font-family:'Courier New',monospace; font-size:12px; display:block;">▼ -0.26%</span>
-            <span style="color:#00d97e; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▲ +1.91% <span style="color:#444">7d</span></span>
-            <span style="color:#00d97e; font-family:'Courier New',monospace; font-size:11px; color:#888; display:block; margin-top:2px;">▲ +2.95% <span style="color:#444">30d</span></span>
-          </td>
-        </tr>
-    </table>
-  </div>
-
-  <!-- LEGEND -->
-  <div style="background:#0d0d0d; border:1px solid #1a1a1a; padding:12px 20px;">
-    <span style="font-family:'Courier New',monospace; font-size:10px; color:#333; letter-spacing:1px;">
-      <span style="color:#00d97e">▲</span> rialzo &nbsp;|&nbsp;
-      <span style="color:#ff4d4f">▼</span> ribasso &nbsp;|&nbsp;
-      sparkline = ultimi 20 giorni &nbsp;|&nbsp;
-      dati: Yahoo Finance
-    </span>
-    
+  <div class="legend">
+    <div class="legend-inner">
+      <span class="legend-text">
+        <span class="up">▲</span> rialzo &nbsp;|&nbsp;
+        <span class="down">▼</span> ribasso &nbsp;|&nbsp;
+        fonte: Yahoo Finance
+      </span>
+      <button class="refresh-btn" onclick="location.reload()">↻ Aggiorna</button>
+    </div>
   </div>
 
 </div>
+<script>
+const ASSETS = [
+  { symbol: "^GSPC",    name: "S&P 500",      category: "📈 Azioni & ETF",   emoji: "🇺🇸" },
+  { symbol: "IWDA.AS",  name: "MSCI World",   category: "📈 Azioni & ETF",   emoji: "🌍" },
+  { symbol: "EIMI.MI",  name: "EIMI EM",      category: "📈 Azioni & ETF",   emoji: "🌏" },
+  { symbol: "XDWT.DE",  name: "XDWT Tech",    category: "📈 Azioni & ETF",   emoji: "💻" },
+  { symbol: "CL=F",     name: "Petrolio WTI", category: "🏭 Materie Prime",   emoji: "🛢️" },
+  { symbol: "GC=F",     name: "Oro",          category: "🏭 Materie Prime",   emoji: "🥇" },
+  { symbol: "SI=F",     name: "Argento",      category: "🏭 Materie Prime",   emoji: "🥈" },
+  { symbol: "BTC-USD",  name: "Bitcoin",      category: "🔗 Crypto",         emoji: "₿"  },
+  { symbol: "SOL-USD",  name: "Solana",       category: "🔗 Crypto",         emoji: "◎"  },
+  { symbol: "EURUSD=X", name: "EUR/USD",      category: "💱 Forex & Macro",  emoji: "💶" },
+  { symbol: "^TNX",     name: "Bond US 10Y",  category: "💱 Forex & Macro",  emoji: "📊" },
+];
+
+async function fetchQuote(symbol) {
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1mo`;
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(r.status);
+    const data = await r.json();
+    const result = data.chart.result[0];
+    const meta = result.meta;
+    const closes = result.indicators.quote[0].close.filter(c => c !== null);
+    if (closes.length < 2) return null;
+    const current  = meta.regularMarketPrice ?? closes.at(-1);
+    const prevDay  = closes.at(-2);
+    const weekAgo  = closes.length >= 6 ? closes.at(-6) : closes[0];
+    const monthAgo = closes[0];
+    const pct = (a, b) => b ? +((a - b) / b * 100).toFixed(2) : 0;
+    return { symbol, current, currency: meta.currency || "",
+      dayPct: pct(current, prevDay), weekPct: pct(current, weekAgo), monthPct: pct(current, monthAgo) };
+  } catch(e) { return null; }
+}
+
+function cls(v) { return v === null ? "flat" : v > 0 ? "up" : v < 0 ? "down" : "flat"; }
+function arrow(v, label="") {
+  if (v === null) return `<span class="flat">– ${label}</span>`;
+  const a = v > 0 ? "▲" : v < 0 ? "▼" : "→";
+  const s = v > 0 ? "+" : "";
+  return `<span class="${cls(v)}">${a} ${s}${v.toFixed(2)}%</span>${label ? ` <span style="color:#aaa">${label}</span>` : ""}`;
+}
+function formatPrice(val, cur) {
+  if (!val) return "N/D";
+  if (val > 10000) return `${val.toLocaleString("it-IT", {maximumFractionDigits:0})} ${cur}`;
+  if (val > 100)   return `${val.toLocaleString("it-IT", {minimumFractionDigits:2, maximumFractionDigits:2})} ${cur}`;
+  return `${val.toFixed(4)} ${cur}`;
+}
+
+function render(results) {
+  const now = new Date();
+  document.getElementById("session-title").textContent = now.getHours() < 13 ? "🌅 Apertura Mercati" : "🌆 Chiusura Mercati";
+  document.getElementById("report-date").textContent = now.toLocaleString("it-IT", {
+    weekday:"long", day:"2-digit", month:"long", year:"numeric", hour:"2-digit", minute:"2-digit"
+  });
+
+  const groups = {};
+  ASSETS.forEach((a, i) => {
+    if (!groups[a.category]) groups[a.category] = [];
+    groups[a.category].push({ ...a, data: results[i] });
+  });
+
+  let html = "";
+  for (const [cat, items] of Object.entries(groups)) {
+    html += `<div class="category-header">${cat}</div>`;
+    items.forEach(({ name, emoji, data }) => {
+      html += `
+      <div class="asset-row">
+        <div class="asset-emoji">${emoji}</div>
+        <div>
+          <div class="asset-name">${name}</div>
+          <div class="asset-price">${data ? formatPrice(data.current, data.currency) : "N/D"}</div>
+        </div>
+        <div class="asset-pcts">
+          <span class="pct-day ${cls(data?.dayPct ?? null)}">${data ? (data.dayPct > 0 ? "▲ +" : data.dayPct < 0 ? "▼ " : "→ ") + Math.abs(data.dayPct).toFixed(2) + "%" : "–"}</span>
+          <span class="pct-sub">${arrow(data?.weekPct ?? null, "7d")} &nbsp; ${arrow(data?.monthPct ?? null, "30d")}</span>
+        </div>
+      </div>`;
+    });
+  }
+  document.getElementById("market-table").innerHTML = html;
+
+  const upCount   = results.filter(r => r?.dayPct > 0).length;
+  const downCount = results.filter(r => r?.dayPct < 0).length;
+  const total = upCount + downCount || 1;
+  const mood  = upCount > downCount ? "prevalentemente positiva" : upCount < downCount ? "in calo generalizzato" : "mista";
+  const el = document.getElementById("commentary-text");
+  if (!el.dataset.ai) {
+    el.textContent = `Sessione ${mood}: ${upCount}/${total} asset in rialzo oggi. Commento AI dettagliato disponibile nell'email del report.`;
+  }
+}
+
+(async () => {
+  const results = await Promise.all(ASSETS.map(a => fetchQuote(a.symbol)));
+  render(results);
+})();
+</script>
 </body>
 </html>
