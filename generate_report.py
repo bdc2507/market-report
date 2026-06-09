@@ -285,16 +285,31 @@ def send_email(html_content, subject, smtp_user, smtp_pass, recipient):
 
 # ── WEB APP UPDATER ────────────────────────────────────────────────────────────
 def update_web_app(market_data, commentary):
-    """Write updated index.html for GitHub Pages."""
-    html = build_html_report(market_data, commentary, is_email=False)
-    # Inject auto-refresh meta and web-app extras
-    html = html.replace(
-        "</title>",
-        '</title>\n<meta http-equiv="refresh" content="900">'  # refresh every 15min
-    )
-    with open("index.html", "w", encoding="utf-8") as f:
-        f.write(html)
-    print("  ✅ index.html updated")
+    """Write data.json for GitHub Pages web app to consume directly."""
+    import json as _json
+    now = datetime.datetime.now()
+    payload = {
+        "generated_at": now.strftime("%A %d %B %Y \u2013 %H:%M"),
+        "session": "apertura" if now.hour < 13 else "chiusura",
+        "commentary": commentary,
+        "assets": [
+            {
+                "symbol":    d["symbol"],
+                "name":      d["name"],
+                "category":  d["category"],
+                "emoji":     d["emoji"],
+                "current":   d["current"],
+                "currency":  d["currency"],
+                "day_pct":   d["day_pct"],
+                "week_pct":  d["week_pct"],
+                "month_pct": d["month_pct"],
+            }
+            for d in market_data
+        ]
+    }
+    with open("data.json", "w", encoding="utf-8") as f:
+        _json.dump(payload, f, ensure_ascii=False, indent=2)
+    print("  ✅ data.json updated")
 
 
 # ── MAIN ───────────────────────────────────────────────────────────────────────
@@ -375,4 +390,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
