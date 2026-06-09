@@ -1,5 +1,5 @@
 {
-  "generated_at": "Tuesday 09 June 2026 – 20:55",
+  "generated_at": "Tuesday 09 June 2026 – 20:58",
   "session": "chiusura",
   "commentary": "Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.",
   "assets": [
@@ -63,44 +63,44 @@
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4286.1,
+      "current": 4284.6,
       "currency": "USD",
-      "day_pct": -1.15,
-      "week_pct": -4.52,
-      "month_pct": -9.17
+      "day_pct": -1.18,
+      "week_pct": -4.56,
+      "month_pct": -9.2
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 65.535,
+      "current": 65.5,
       "currency": "USD",
-      "day_pct": -4.22,
-      "week_pct": -12.98,
-      "month_pct": -23.34
+      "day_pct": -4.27,
+      "week_pct": -13.03,
+      "month_pct": -23.38
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 62045.44,
+      "current": 62074.65,
       "currency": "USD",
-      "day_pct": -1.66,
-      "week_pct": -2.75,
-      "month_pct": -23.08
+      "day_pct": -1.61,
+      "week_pct": -2.71,
+      "month_pct": -23.05
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 65.53,
+      "current": 65.54,
       "currency": "USD",
-      "day_pct": -1.89,
-      "week_pct": -4.64,
-      "month_pct": -29.65
+      "day_pct": -1.88,
+      "week_pct": -4.63,
+      "month_pct": -29.64
     },
     {
       "symbol": "EURUSD=X",
