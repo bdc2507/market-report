@@ -186,7 +186,7 @@ def build_html_report(market_data, commentary, is_email=True):
         <td style="padding:13px 8px; font-size:18px; width:30px; text-align:center;">{d['emoji']}</td>
         <td style="padding:13px 6px;">
           <div style="font-size:14px; font-weight:600; color:#111111; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:120px;">{d['name']}</div>
-          <div style="font-family:'Courier New',monospace; font-size:11px; color:#888888; margin-top:2px;">{price_str}</div>
+          <div style="font-family:'Courier New',monospace; font-size:13px; font-weight:600; color:#111111; margin-top:3px;">{price_str}</div>
         </td>
         <td style="padding:13px 6px; text-align:right; white-space:nowrap;">
           <div style="font-size:17px; font-weight:600; color:{day_col};">{pct_arrow(d['day_pct'])}</div>
