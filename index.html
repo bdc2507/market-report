@@ -87,9 +87,11 @@ function pctArrow(v, label) {
 
 function formatPrice(val, cur) {
   if (!val && val !== 0) return "N/D";
-  if (val > 10000) return `${val.toLocaleString("it-IT", {maximumFractionDigits:0})} ${cur}`;
-  if (val > 100)   return `${val.toLocaleString("it-IT", {minimumFractionDigits:2, maximumFractionDigits:2})} ${cur}`;
-  return `${parseFloat(val).toFixed(4)} ${cur}`;
+  const n = parseFloat(val);
+  if (isNaN(n)) return "N/D";
+  if (n > 1000)  return `${n.toLocaleString("it-IT", {maximumFractionDigits:0})} ${cur}`;
+  if (n > 10)    return `${n.toLocaleString("it-IT", {minimumFractionDigits:2, maximumFractionDigits:2})} ${cur}`;
+  return `${n.toFixed(4)} ${cur}`;
 }
 
 function render(data) {
