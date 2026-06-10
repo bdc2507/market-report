@@ -21,7 +21,7 @@ ASSETS = [
     # Equities / ETF
     {"symbol": "^GSPC",   "name": "S&P 500",       "category": "equity",    "emoji": "🇺🇸"},
     {"symbol": "IWDA.AS", "name": "MSCI World",     "category": "equity",    "emoji": "🌍"},
-    {"symbol": "EIMI.MI", "name": "EIMI MI",        "category": "equity",    "emoji": "🌏"},
+    {"symbol": "EIMI.AS", "name": "EIMI EM",        "category": "equity",    "emoji": "🌏"},
     {"symbol": "XDWT.DE", "name": "XDWT Tech",      "category": "equity",    "emoji": "💻"},
     # Commodities
     {"symbol": "CL=F",    "name": "Petrolio WTI",   "category": "commodity", "emoji": "🛢️"},
@@ -177,7 +177,13 @@ def build_html_report(market_data, commentary, is_email=True):
     for group_label, items in groups.items():
         rows = ""
         for d in items:
-            price_str = f"{d['current']:,.4g} {d['currency']}" if d["current"] else "N/D"
+            if d["current"]:
+                v = d["current"]
+                if v > 1000:   price_str = f"{v:,.0f} {d['currency']}"
+                elif v > 10:   price_str = f"{v:,.2f} {d['currency']}"
+                else:          price_str = f"{v:.4f} {d['currency']}"
+            else:
+                price_str = "N/D"
             day_col   = pct_color(d["day_pct"])
             week_col  = pct_color(d["week_pct"])
             month_col = pct_color(d["month_pct"])
