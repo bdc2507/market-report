@@ -1,6 +1,6 @@
 {
-  "generated_at": "Wednesday 24 June 2026 – 12:29",
-  "session": "apertura",
+  "generated_at": "Wednesday 24 June 2026 – 17:35",
+  "session": "chiusura",
   "commentary": "Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.",
   "assets": [
     {
@@ -8,121 +8,121 @@
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7365.46,
+      "current": 7419.39,
       "currency": "USD",
-      "day_pct": -1.44,
-      "week_pct": -2.5,
-      "month_pct": -2.04
+      "day_pct": 0.73,
+      "week_pct": -1.22,
+      "month_pct": -1.33
     },
     {
       "symbol": "IWDA.AS",
       "name": "MSCI World",
       "category": "equity",
       "emoji": "🌍",
-      "current": 124.29,
+      "current": 124.68,
       "currency": "EUR",
-      "day_pct": 0.24,
-      "week_pct": 0.06,
-      "month_pct": 0.62
+      "day_pct": 0.56,
+      "week_pct": 0.38,
+      "month_pct": 0.93
     },
     {
       "symbol": "EIMI.MI",
       "name": "EIMI MI",
       "category": "equity",
       "emoji": "🌏",
-      "current": 48.635,
+      "current": 48.53,
       "currency": "EUR",
-      "day_pct": 0.38,
-      "week_pct": -1.2,
-      "month_pct": 2.62
+      "day_pct": 0.17,
+      "week_pct": -1.41,
+      "month_pct": 2.39
     },
     {
       "symbol": "XDWT.DE",
       "name": "XDWT Tech",
       "category": "equity",
       "emoji": "💻",
-      "current": 123.2,
+      "current": 122.82,
       "currency": "EUR",
-      "day_pct": 0.39,
-      "week_pct": 0.08,
-      "month_pct": 1.47
+      "day_pct": 0.08,
+      "week_pct": -0.23,
+      "month_pct": 1.15
     },
     {
       "symbol": "CL=F",
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 71.93,
+      "current": 70.02,
       "currency": "USD",
-      "day_pct": -1.75,
-      "week_pct": -5.42,
-      "month_pct": -23.39
+      "day_pct": -4.36,
+      "week_pct": -7.93,
+      "month_pct": -25.42
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4075.4,
+      "current": 4024.0,
       "currency": "USD",
-      "day_pct": -1.32,
-      "week_pct": -5.9,
-      "month_pct": -9.44
+      "day_pct": -2.56,
+      "week_pct": -7.09,
+      "month_pct": -10.59
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 60.825,
+      "current": 58.925,
       "currency": "USD",
-      "day_pct": -1.93,
-      "week_pct": -12.98,
-      "month_pct": -20.29
+      "day_pct": -4.99,
+      "week_pct": -15.7,
+      "month_pct": -22.78
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 62452.5,
+      "current": 60626.73,
       "currency": "USD",
-      "day_pct": -0.34,
-      "week_pct": -1.71,
-      "month_pct": -18.87
+      "day_pct": -3.26,
+      "week_pct": -4.59,
+      "month_pct": -21.24
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 68.99,
+      "current": 68.06,
       "currency": "USD",
-      "day_pct": -0.94,
-      "week_pct": -1.05,
-      "month_pct": -19.07
+      "day_pct": -2.27,
+      "week_pct": -2.38,
+      "month_pct": -20.16
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1343,
+      "current": 1.1356,
       "currency": "USD",
-      "day_pct": -0.74,
-      "week_pct": -2.3,
-      "month_pct": -2.57
+      "day_pct": -0.62,
+      "week_pct": -2.19,
+      "month_pct": -2.46
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 4.493,
+      "current": 4.408,
       "currency": "USD",
-      "day_pct": 0.67,
-      "week_pct": 0.67,
-      "month_pct": -0.0
+      "day_pct": -0.97,
+      "week_pct": -1.76,
+      "month_pct": -1.89
     }
   ]
 }
