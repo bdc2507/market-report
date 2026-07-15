@@ -1,6 +1,6 @@
 {
-  "generated_at": "Tuesday 14 July 2026 – 16:57",
-  "session": "chiusura",
+  "generated_at": "Wednesday 15 July 2026 – 11:25",
+  "session": "apertura",
   "commentary": "Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.",
   "assets": [
     {
@@ -8,10 +8,10 @@
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7543.37,
+      "current": 7543.59,
       "currency": "USD",
-      "day_pct": 0.37,
-      "week_pct": 0.53,
+      "day_pct": -0.42,
+      "week_pct": 0.08,
       "month_pct": -0.14
     },
     {
@@ -19,110 +19,110 @@
       "name": "MSCI World",
       "category": "equity",
       "emoji": "🌍",
-      "current": 126.07,
+      "current": 126.5,
       "currency": "EUR",
-      "day_pct": -0.21,
-      "week_pct": 0.53,
-      "month_pct": 1.47
+      "day_pct": 0.33,
+      "week_pct": 1.63,
+      "month_pct": 1.82
     },
     {
       "symbol": "EIMI.MI",
       "name": "EIMI MI",
       "category": "equity",
       "emoji": "🌏",
-      "current": 46.845,
+      "current": 47.26,
       "currency": "EUR",
-      "day_pct": 0.16,
-      "week_pct": 0.11,
-      "month_pct": -4.65
+      "day_pct": 0.79,
+      "week_pct": 1.13,
+      "month_pct": -3.81
     },
     {
       "symbol": "XDWT.DE",
       "name": "XDWT Tech",
       "category": "equity",
       "emoji": "💻",
-      "current": 122.46,
+      "current": 124.04,
       "currency": "EUR",
-      "day_pct": -0.47,
-      "week_pct": 2.63,
-      "month_pct": -1.5
+      "day_pct": 0.85,
+      "week_pct": 3.68,
+      "month_pct": -0.23
     },
     {
       "symbol": "CL=F",
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 79.23,
+      "current": 79.71,
       "currency": "USD",
-      "day_pct": 1.39,
-      "week_pct": 12.48,
-      "month_pct": -1.88
+      "day_pct": 0.47,
+      "week_pct": 8.42,
+      "month_pct": -1.29
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4087.9,
+      "current": 4036.2,
       "currency": "USD",
-      "day_pct": 2.27,
-      "week_pct": -1.38,
-      "month_pct": -5.55
+      "day_pct": -0.61,
+      "week_pct": -0.85,
+      "month_pct": -6.74
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 59.495,
+      "current": 58.65,
       "currency": "USD",
-      "day_pct": 3.23,
-      "week_pct": -2.36,
-      "month_pct": -15.09
+      "day_pct": -0.21,
+      "week_pct": 0.84,
+      "month_pct": -16.29
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 63978.5,
+      "current": 64823.75,
       "currency": "USD",
-      "day_pct": 2.79,
-      "week_pct": 1.24,
-      "month_pct": -2.64
+      "day_pct": -0.2,
+      "week_pct": 1.09,
+      "month_pct": -2.21
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 77.08,
+      "current": 77.82,
       "currency": "USD",
-      "day_pct": 2.96,
-      "week_pct": -1.24,
-      "month_pct": 8.31
+      "day_pct": 0.07,
+      "week_pct": -0.32,
+      "month_pct": 5.19
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1447,
+      "current": 1.1427,
       "currency": "USD",
       "day_pct": 0.37,
-      "week_pct": 0.05,
-      "month_pct": -1.35
+      "week_pct": 0.2,
+      "month_pct": -1.52
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 4.569,
+      "current": 4.585,
       "currency": "USD",
-      "day_pct": -0.87,
-      "week_pct": 0.88,
-      "month_pct": 2.24
+      "day_pct": 0.35,
+      "week_pct": 2.37,
+      "month_pct": 2.6
     }
   ]
 }
