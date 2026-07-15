@@ -1,6 +1,6 @@
 {
-  "generated_at": "Wednesday 15 July 2026 – 11:25",
-  "session": "apertura",
+  "generated_at": "Wednesday 15 July 2026 – 16:56",
+  "session": "chiusura",
   "commentary": "Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.",
   "assets": [
     {
@@ -8,121 +8,121 @@
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7543.59,
+      "current": 7558.08,
       "currency": "USD",
-      "day_pct": -0.42,
-      "week_pct": 0.08,
-      "month_pct": -0.14
+      "day_pct": 0.57,
+      "week_pct": 0.72,
+      "month_pct": 0.05
     },
     {
       "symbol": "IWDA.AS",
       "name": "MSCI World",
       "category": "equity",
       "emoji": "🌍",
-      "current": 126.5,
+      "current": 126.33,
       "currency": "EUR",
-      "day_pct": 0.33,
-      "week_pct": 1.63,
-      "month_pct": 1.82
+      "day_pct": 0.19,
+      "week_pct": 1.49,
+      "month_pct": 1.68
     },
     {
       "symbol": "EIMI.MI",
       "name": "EIMI MI",
       "category": "equity",
       "emoji": "🌏",
-      "current": 47.26,
+      "current": 46.77,
       "currency": "EUR",
-      "day_pct": 0.79,
-      "week_pct": 1.13,
-      "month_pct": -3.81
+      "day_pct": -0.26,
+      "week_pct": 0.09,
+      "month_pct": -4.8
     },
     {
       "symbol": "XDWT.DE",
       "name": "XDWT Tech",
       "category": "equity",
       "emoji": "💻",
-      "current": 124.04,
+      "current": 121.96,
       "currency": "EUR",
-      "day_pct": 0.85,
-      "week_pct": 3.68,
-      "month_pct": -0.23
+      "day_pct": -0.85,
+      "week_pct": 1.94,
+      "month_pct": -1.9
     },
     {
       "symbol": "CL=F",
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 79.71,
+      "current": 79.19,
       "currency": "USD",
-      "day_pct": 0.47,
-      "week_pct": 8.42,
-      "month_pct": -1.29
+      "day_pct": -0.19,
+      "week_pct": 7.71,
+      "month_pct": -1.93
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4036.2,
+      "current": 4061.4,
       "currency": "USD",
-      "day_pct": -0.61,
-      "week_pct": -0.85,
-      "month_pct": -6.74
+      "day_pct": 0.01,
+      "week_pct": -0.23,
+      "month_pct": -6.16
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 58.65,
+      "current": 58.36,
       "currency": "USD",
-      "day_pct": -0.21,
-      "week_pct": 0.84,
-      "month_pct": -16.29
+      "day_pct": -0.7,
+      "week_pct": 0.34,
+      "month_pct": -16.71
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 64823.75,
+      "current": 65331.97,
       "currency": "USD",
-      "day_pct": -0.2,
-      "week_pct": 1.09,
-      "month_pct": -2.21
+      "day_pct": 0.58,
+      "week_pct": 1.88,
+      "month_pct": -1.44
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 77.82,
+      "current": 78.05,
       "currency": "USD",
-      "day_pct": 0.07,
-      "week_pct": -0.32,
-      "month_pct": 5.19
+      "day_pct": 0.37,
+      "week_pct": -0.02,
+      "month_pct": 5.5
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1427,
+      "current": 1.1439,
       "currency": "USD",
-      "day_pct": 0.37,
-      "week_pct": 0.2,
-      "month_pct": -1.52
+      "day_pct": 0.48,
+      "week_pct": 0.31,
+      "month_pct": -1.41
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 4.585,
+      "current": 4.557,
       "currency": "USD",
-      "day_pct": 0.35,
-      "week_pct": 2.37,
-      "month_pct": 2.6
+      "day_pct": -1.13,
+      "week_pct": 0.62,
+      "month_pct": 1.97
     }
   ]
 }
