@@ -1,6 +1,6 @@
 {
-  "generated_at": "Thursday 16 July 2026 – 11:33",
-  "session": "apertura",
+  "generated_at": "Thursday 16 July 2026 – 17:07",
+  "session": "chiusura",
   "commentary": "Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.",
   "assets": [
     {
@@ -8,121 +8,121 @@
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7572.4,
+      "current": 7559.49,
       "currency": "USD",
-      "day_pct": 0.38,
-      "week_pct": 1.2,
-      "month_pct": 0.81
+      "day_pct": -0.17,
+      "week_pct": 0.21,
+      "month_pct": 0.64
     },
     {
       "symbol": "IWDA.AS",
       "name": "MSCI World",
       "category": "equity",
       "emoji": "🌍",
-      "current": 126.02,
+      "current": 126.14,
       "currency": "EUR",
-      "day_pct": -0.21,
-      "week_pct": 0.24,
-      "month_pct": 1.51
+      "day_pct": -0.12,
+      "week_pct": 0.33,
+      "month_pct": 1.61
     },
     {
       "symbol": "EIMI.MI",
       "name": "EIMI MI",
       "category": "equity",
       "emoji": "🌏",
-      "current": 46.385,
+      "current": 46.15,
       "currency": "EUR",
-      "day_pct": -0.89,
-      "week_pct": -2.82,
-      "month_pct": -4.51
+      "day_pct": -1.39,
+      "week_pct": -3.31,
+      "month_pct": -4.99
     },
     {
       "symbol": "XDWT.DE",
       "name": "XDWT Tech",
       "category": "equity",
       "emoji": "💻",
-      "current": 121.94,
+      "current": 120.82,
       "currency": "EUR",
-      "day_pct": -0.0,
-      "week_pct": -1.42,
-      "month_pct": -0.67
+      "day_pct": -0.92,
+      "week_pct": -2.33,
+      "month_pct": -1.58
     },
     {
       "symbol": "CL=F",
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 79.32,
+      "current": 79.58,
       "currency": "USD",
-      "day_pct": -0.35,
-      "week_pct": 10.04,
-      "month_pct": 4.3
+      "day_pct": -0.03,
+      "week_pct": 10.41,
+      "month_pct": 4.64
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4039.9,
+      "current": 4000.0,
       "currency": "USD",
-      "day_pct": -0.1,
-      "week_pct": -2.2,
-      "month_pct": -6.72
+      "day_pct": -1.09,
+      "week_pct": -3.16,
+      "month_pct": -7.64
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 57.31,
+      "current": 56.335,
       "currency": "USD",
-      "day_pct": 0.35,
-      "week_pct": -5.08,
-      "month_pct": -18.01
+      "day_pct": -1.36,
+      "week_pct": -6.7,
+      "month_pct": -19.41
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 64052.08,
+      "current": 64401.47,
       "currency": "USD",
-      "day_pct": -1.02,
-      "week_pct": 0.39,
-      "month_pct": -2.36
+      "day_pct": -0.48,
+      "week_pct": 0.94,
+      "month_pct": -1.83
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 76.09,
+      "current": 76.14,
       "currency": "USD",
-      "day_pct": -1.52,
-      "week_pct": -0.96,
-      "month_pct": 3.65
+      "day_pct": -1.45,
+      "week_pct": -0.89,
+      "month_pct": 3.71
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1464,
+      "current": 1.1442,
       "currency": "USD",
-      "day_pct": 0.34,
-      "week_pct": 0.37,
-      "month_pct": -1.12
+      "day_pct": 0.15,
+      "week_pct": 0.17,
+      "month_pct": -1.31
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 4.545,
+      "current": 4.586,
       "currency": "USD",
-      "day_pct": -0.87,
-      "week_pct": -0.53,
-      "month_pct": 1.7
+      "day_pct": 0.9,
+      "week_pct": 1.04,
+      "month_pct": 3.57
     }
   ]
 }
