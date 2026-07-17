@@ -1,6 +1,6 @@
 {
-  "generated_at": "Friday 17 July 2026 – 11:24",
-  "session": "apertura",
+  "generated_at": "Friday 17 July 2026 – 16:47",
+  "session": "chiusura",
   "commentary": "Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.",
   "assets": [
     {
@@ -8,121 +8,121 @@
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7533.77,
+      "current": 7486.27,
       "currency": "USD",
-      "day_pct": -0.51,
-      "week_pct": -0.13,
-      "month_pct": 1.53
+      "day_pct": -0.63,
+      "week_pct": -1.18,
+      "month_pct": 0.89
     },
     {
       "symbol": "IWDA.AS",
       "name": "MSCI World",
       "category": "equity",
       "emoji": "🌍",
-      "current": 124.53,
+      "current": 125.0,
       "currency": "EUR",
-      "day_pct": -1.37,
-      "week_pct": -1.28,
-      "month_pct": 0.26
+      "day_pct": -1.0,
+      "week_pct": -0.91,
+      "month_pct": 0.64
     },
     {
       "symbol": "EIMI.MI",
       "name": "EIMI MI",
       "category": "equity",
       "emoji": "🌏",
-      "current": 44.48,
+      "current": 45.145,
       "currency": "EUR",
-      "day_pct": -3.82,
-      "week_pct": -7.08,
-      "month_pct": -9.64
+      "day_pct": -2.38,
+      "week_pct": -5.69,
+      "month_pct": -8.29
     },
     {
       "symbol": "XDWT.DE",
       "name": "XDWT Tech",
       "category": "equity",
       "emoji": "💻",
-      "current": 117.8,
+      "current": 118.98,
       "currency": "EUR",
-      "day_pct": -2.5,
-      "week_pct": -4.66,
-      "month_pct": -4.31
+      "day_pct": -1.52,
+      "week_pct": -3.71,
+      "month_pct": -3.35
     },
     {
       "symbol": "CL=F",
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 79.44,
+      "current": 80.69,
       "currency": "USD",
-      "day_pct": 0.62,
-      "week_pct": 11.24,
-      "month_pct": 3.45
+      "day_pct": 2.2,
+      "week_pct": 13.0,
+      "month_pct": 5.08
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4002.3,
+      "current": 3998.5,
       "currency": "USD",
-      "day_pct": 0.42,
-      "week_pct": -2.48,
-      "month_pct": -8.18
+      "day_pct": 0.32,
+      "week_pct": -2.57,
+      "month_pct": -8.27
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 55.875,
+      "current": 55.845,
       "currency": "USD",
-      "day_pct": -0.04,
-      "week_pct": -6.58,
-      "month_pct": -20.96
+      "day_pct": -0.09,
+      "week_pct": -6.63,
+      "month_pct": -21.01
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 62883.83,
+      "current": 63159.83,
       "currency": "USD",
-      "day_pct": -1.42,
-      "week_pct": -1.37,
-      "month_pct": -2.38
+      "day_pct": -0.99,
+      "week_pct": -0.94,
+      "month_pct": -1.95
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 74.58,
+      "current": 74.25,
       "currency": "USD",
-      "day_pct": -0.92,
-      "week_pct": -2.98,
-      "month_pct": 3.68
+      "day_pct": -1.36,
+      "week_pct": -3.41,
+      "month_pct": 3.22
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1444,
+      "current": 1.1446,
       "currency": "USD",
-      "day_pct": -0.23,
-      "week_pct": 0.09,
-      "month_pct": -1.43
+      "day_pct": -0.21,
+      "week_pct": 0.11,
+      "month_pct": -1.41
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 4.569,
+      "current": 4.529,
       "currency": "USD",
-      "day_pct": 0.53,
-      "week_pct": 0.66,
-      "month_pct": 3.18
+      "day_pct": -0.88,
+      "week_pct": -0.88,
+      "month_pct": 1.48
     }
   ]
 }
