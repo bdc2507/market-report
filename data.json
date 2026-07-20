@@ -1,128 +1,128 @@
 {
-  "generated_at": "Monday 20 July 2026 – 17:14",
+  "generated_at": "Monday 20 July 2026 – 17:47",
   "session": "chiusura",
-  "commentary": "Dati di mercato aggiornati. Analisi AI temporaneamente non disponibile.",
+  "commentary": "# Analisi di Mercato - 20/07/2026\n\nI mercati oggi sono come un'altalena: alcuni titoli salgono (tech e criptovalute guadagnano), ma nella settimana sono scesi parecchio. Il petrolio invece sta facendo festa perché costa sempre più, mentre l'argento sta soffrendo ed è crollato del 12% nel mese. Il trend più importante è che i bond americani salgono di prezzo, il che significa che gli investitori hanno un po' di paura e cercano rifugio nei titoli più sicuri.",
   "assets": [
     {
       "symbol": "^GSPC",
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7473.59,
+      "current": 7482.97,
       "currency": "USD",
-      "day_pct": 0.21,
-      "week_pct": -0.56,
-      "month_pct": 0.01
+      "day_pct": 0.34,
+      "week_pct": -0.43,
+      "month_pct": 0.14
     },
     {
       "symbol": "IWDA.AS",
       "name": "MSCI World",
       "category": "equity",
       "emoji": "🌍",
-      "current": 125.0,
+      "current": 125.29,
       "currency": "EUR",
-      "day_pct": 0.12,
-      "week_pct": -1.05,
-      "month_pct": -0.02
+      "day_pct": 0.35,
+      "week_pct": -0.82,
+      "month_pct": 0.21
     },
     {
       "symbol": "EIMI.MI",
       "name": "EIMI MI",
       "category": "equity",
       "emoji": "🌏",
-      "current": 45.765,
+      "current": 45.74,
       "currency": "EUR",
-      "day_pct": 1.04,
-      "week_pct": -2.15,
-      "month_pct": -9.79
+      "day_pct": 0.98,
+      "week_pct": -2.2,
+      "month_pct": -9.84
     },
     {
       "symbol": "XDWT.DE",
       "name": "XDWT Tech",
       "category": "equity",
       "emoji": "💻",
-      "current": 119.68,
+      "current": 120.08,
       "currency": "EUR",
-      "day_pct": 0.76,
-      "week_pct": -2.73,
-      "month_pct": -5.21
+      "day_pct": 1.09,
+      "week_pct": -2.41,
+      "month_pct": -4.89
     },
     {
       "symbol": "CL=F",
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 81.63,
+      "current": 81.52,
       "currency": "USD",
-      "day_pct": -1.04,
-      "week_pct": 4.47,
-      "month_pct": 9.1
+      "day_pct": -1.18,
+      "week_pct": 4.33,
+      "month_pct": 8.95
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4014.0,
+      "current": 4018.6,
       "currency": "USD",
-      "day_pct": 0.03,
-      "week_pct": 0.43,
-      "month_pct": -4.01
+      "day_pct": 0.15,
+      "week_pct": 0.54,
+      "month_pct": -3.9
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 57.12,
+      "current": 57.28,
       "currency": "USD",
-      "day_pct": 1.93,
-      "week_pct": -0.89,
-      "month_pct": -12.83
+      "day_pct": 2.22,
+      "week_pct": -0.61,
+      "month_pct": -12.59
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 64873.06,
+      "current": 65321.54,
       "currency": "USD",
-      "day_pct": 0.28,
-      "week_pct": 0.25,
-      "month_pct": 0.99
+      "day_pct": 0.97,
+      "week_pct": 0.94,
+      "month_pct": 1.68
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 76.91,
+      "current": 77.5,
       "currency": "USD",
-      "day_pct": 0.73,
-      "week_pct": -0.46,
-      "month_pct": 5.11
+      "day_pct": 1.5,
+      "week_pct": 0.31,
+      "month_pct": 5.91
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1412,
+      "current": 1.1413,
       "currency": "USD",
-      "day_pct": -0.29,
+      "day_pct": -0.28,
       "week_pct": 0.07,
-      "month_pct": -0.44
+      "month_pct": -0.43
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 4.58,
+      "current": 4.59,
       "currency": "USD",
-      "day_pct": 0.86,
-      "week_pct": -0.63,
-      "month_pct": 1.57
+      "day_pct": 1.08,
+      "week_pct": -0.41,
+      "month_pct": 1.8
     }
   ]
 }
