@@ -30,7 +30,7 @@ ASSETS = [
     {"symbol": "IWDA.AS",  "name": "MSCI World",    "category": "equity",    "emoji": "🌍"},
     {"symbol": "EIMI.MI",  "name": "EIMI MI",       "category": "equity",    "emoji": "🌏"},
     {"symbol": "XDWT.DE",  "name": "XDWT Tech",     "category": "equity",    "emoji": "💻"},
-    {"symbol": "ENRG.MI",  "name": "Amundi Energy", "category": "equity",    "emoji": "⚡"},
+    {"symbol": "ENRG.MI",  "name": "ENGR energy stock 600", "category": "equity",    "emoji": "⚡"},
     # Commodities
     {"symbol": "CL=F",     "name": "Petrolio WTI",  "category": "commodity", "emoji": "🛢️"},
     {"symbol": "GC=F",     "name": "Oro",            "category": "commodity", "emoji": "🥇"},
