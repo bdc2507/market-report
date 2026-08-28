@@ -1,18 +1,18 @@
 {
-  "generated_at": "Friday 28 August 2026 – 21:29",
-  "session": "chiusura",
-  "commentary": "# Analisi Mercati - 28/08/2026\n\nOggi i mercati sono come un'altalena: mentre le azioni tecnologiche volano (soprattutto il settore tech), l'oro e le criptovalute perdono quota come palloncini che perdono aria. La cosa più interessante è che il Bitcoin e Solana sono comunque in rialzo da un mese, il che significa che gli investitori rimangono ottimisti a lungo termine nonostante le oscillazioni di oggi.",
+  "generated_at": "Saturday 29 August 2026 – 00:58",
+  "session": "apertura",
+  "commentary": "# Analisi Mercati - 29/08/2026\n\nOggi il mercato è un po' confuso: mentre i titoli tech vanno fortissimo (come auto sportive in accelerazione), l'oro e l'argento scendono e anche il Bitcoin rallenta. La cosa più importante è che le criptovalute stanno volando da un mese (Bitcoin e Solana guadagnano tantissimo), segno che gli investitori cercano guadagni veloci e rischiano di più.",
   "assets": [
     {
       "symbol": "^GSPC",
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7712.93,
+      "current": 7711.76,
       "currency": "USD",
-      "day_pct": -0.23,
-      "week_pct": 0.5,
-      "month_pct": 3.82
+      "day_pct": -0.25,
+      "week_pct": 0.49,
+      "month_pct": 5.41
     },
     {
       "symbol": "IWDA.AS",
@@ -21,8 +21,8 @@
       "emoji": "🌍",
       "current": 128.22,
       "currency": "EUR",
-      "day_pct": 1.22,
-      "week_pct": 1.62,
+      "day_pct": 1.34,
+      "week_pct": 0.97,
       "month_pct": 2.43
     },
     {
@@ -32,8 +32,8 @@
       "emoji": "🌏",
       "current": 47.83,
       "currency": "EUR",
-      "day_pct": 0.94,
-      "week_pct": 2.61,
+      "day_pct": 1.54,
+      "week_pct": 2.89,
       "month_pct": 6.45
     },
     {
@@ -43,8 +43,8 @@
       "emoji": "💻",
       "current": 126.24,
       "currency": "EUR",
-      "day_pct": 3.83,
-      "week_pct": 3.44,
+      "day_pct": 4.26,
+      "week_pct": 2.7,
       "month_pct": 7.46
     },
     {
@@ -54,8 +54,8 @@
       "emoji": "⚡",
       "current": 108.7,
       "currency": "EUR",
-      "day_pct": -0.48,
-      "week_pct": -2.95,
+      "day_pct": -1.15,
+      "week_pct": -2.27,
       "month_pct": 6.49
     },
     {
@@ -63,66 +63,66 @@
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 83.26,
+      "current": 83.44,
       "currency": "USD",
-      "day_pct": -0.32,
-      "week_pct": -4.36,
-      "month_pct": 5.05
+      "day_pct": -0.11,
+      "week_pct": -4.16,
+      "month_pct": 5.27
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4509.2,
+      "current": 4504.1,
       "currency": "USD",
-      "day_pct": -2.18,
-      "week_pct": -2.48,
-      "month_pct": 11.72
+      "day_pct": -2.29,
+      "week_pct": -2.6,
+      "month_pct": 11.59
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 67.14,
+      "current": 67.09,
       "currency": "USD",
-      "day_pct": -3.3,
-      "week_pct": -3.35,
-      "month_pct": 17.18
+      "day_pct": -3.37,
+      "week_pct": -3.42,
+      "month_pct": 17.09
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 77692.41,
+      "current": 77702.22,
       "currency": "USD",
-      "day_pct": -3.2,
-      "week_pct": -0.08,
-      "month_pct": 21.64
+      "day_pct": -3.18,
+      "week_pct": -0.07,
+      "month_pct": 21.65
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 103.38,
+      "current": 104.08,
       "currency": "USD",
-      "day_pct": -5.34,
-      "week_pct": 8.32,
-      "month_pct": 40.27
+      "day_pct": -4.7,
+      "week_pct": 9.05,
+      "month_pct": 41.22
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.159,
+      "current": 1.1587,
       "currency": "USD",
-      "day_pct": -0.56,
-      "week_pct": -0.84,
-      "month_pct": 1.94
+      "day_pct": -0.58,
+      "week_pct": -0.86,
+      "month_pct": 1.91
     },
     {
       "symbol": "^TNX",
