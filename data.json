@@ -1,139 +1,139 @@
 {
-  "generated_at": "Wednesday 04 November 2026 – 22:20",
+  "generated_at": "Thursday 05 November 2026 – 17:39",
   "session": "chiusura",
-  "commentary": "# Analisi Mercato 04/11/2026\n\nOggi è stata una giornata positiva per le azioni, che hanno guadagnato come se avessero ricevuto una spinta in avanti, ma se guardi la settimana intera il quadro è più confuso. La notizia più interessante è che l'oro e il petrolio si comportano in modo opposto: l'oro sale (la gente lo compra quando ha paura) mentre il petrolio crolla drasticamente, segno che l'economia potrebbe rallentare. Bitcoin invece continua a brillare con i suoi guadagni settimanali.",
+  "commentary": "# Analisi Mercati 05/11/2026\n\nOggi i mercati sono in rosso: è come se tutti i negozi avessero uno sconto, ma la gente ha paura a comprare. Le azioni tech crollano più delle altre perché gli investitori le considerano più rischiose. L'unico salvagente è l'oro che sale, mentre le criptovalute scendono insieme alle azioni, segno che gli investitori preferiscono la sicurezza alla scommessa.",
   "assets": [
     {
       "symbol": "^GSPC",
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7702.13,
+      "current": 7482.9,
       "currency": "USD",
-      "day_pct": 1.76,
-      "week_pct": -0.54,
-      "month_pct": -0.92
+      "day_pct": -2.68,
+      "week_pct": -3.08,
+      "month_pct": -3.74
     },
     {
       "symbol": "IWDA.AS",
       "name": "MSCI World",
       "category": "equity",
       "emoji": "🌍",
-      "current": 130.53,
+      "current": 127.92,
       "currency": "EUR",
-      "day_pct": 1.23,
-      "week_pct": -0.91,
-      "month_pct": -0.5
+      "day_pct": -2.0,
+      "week_pct": -2.73,
+      "month_pct": -2.49
     },
     {
       "symbol": "EIMI.MI",
       "name": "EIMI MI",
       "category": "equity",
       "emoji": "🌏",
-      "current": 45.065,
+      "current": 43.22,
       "currency": "EUR",
-      "day_pct": 0.85,
-      "week_pct": -3.14,
-      "month_pct": -10.16
+      "day_pct": -4.09,
+      "week_pct": -5.9,
+      "month_pct": -13.84
     },
     {
       "symbol": "XDWT.DE",
       "name": "XDWT Tech",
       "category": "equity",
       "emoji": "💻",
-      "current": 124.22,
+      "current": 117.0,
       "currency": "EUR",
-      "day_pct": 0.42,
-      "week_pct": -6.38,
-      "month_pct": -10.23
+      "day_pct": -5.81,
+      "week_pct": -11.08,
+      "month_pct": -15.45
     },
     {
       "symbol": "ENRG.MI",
       "name": "ENGR energy stock 600",
       "category": "equity",
       "emoji": "⚡",
-      "current": 113.14,
+      "current": 112.9,
       "currency": "EUR",
-      "day_pct": -1.79,
-      "week_pct": -3.32,
-      "month_pct": -0.12
+      "day_pct": -0.21,
+      "week_pct": -4.63,
+      "month_pct": -0.34
     },
     {
       "symbol": "CL=F",
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 88.74,
+      "current": 90.29,
       "currency": "USD",
-      "day_pct": -7.65,
-      "week_pct": -13.66,
-      "month_pct": -0.77
+      "day_pct": 2.46,
+      "week_pct": -11.48,
+      "month_pct": 0.96
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4075.6,
+      "current": 4112.5,
       "currency": "USD",
-      "day_pct": 3.43,
-      "week_pct": 0.59,
-      "month_pct": -1.95
+      "day_pct": 0.97,
+      "week_pct": 2.01,
+      "month_pct": -1.07
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 52.37,
+      "current": 52.11,
       "currency": "USD",
-      "day_pct": 5.61,
-      "week_pct": -2.03,
-      "month_pct": -13.96
+      "day_pct": -0.02,
+      "week_pct": -0.16,
+      "month_pct": -14.39
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 80099.24,
+      "current": 76364.0,
       "currency": "USD",
-      "day_pct": 3.56,
-      "week_pct": 3.76,
-      "month_pct": -7.38
+      "day_pct": -5.03,
+      "week_pct": -1.38,
+      "month_pct": -10.98
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 94.8,
+      "current": 90.93,
       "currency": "USD",
-      "day_pct": 2.02,
-      "week_pct": -1.47,
-      "month_pct": -21.99
+      "day_pct": -4.77,
+      "week_pct": -4.63,
+      "month_pct": -24.7
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1232,
+      "current": 1.123,
       "currency": "USD",
-      "day_pct": 0.36,
-      "week_pct": 0.92,
-      "month_pct": -0.2
+      "day_pct": 0.2,
+      "week_pct": 0.67,
+      "month_pct": -0.22
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 4.894,
+      "current": 4.87,
       "currency": "USD",
-      "day_pct": -1.17,
-      "week_pct": -2.99,
-      "month_pct": -7.85
+      "day_pct": -0.49,
+      "week_pct": -2.39,
+      "month_pct": -8.3
     }
   ]
 }
