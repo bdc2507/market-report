@@ -1,18 +1,18 @@
 {
-  "generated_at": "Monday 09 November 2026 – 19:41",
-  "session": "chiusura",
-  "commentary": "# Analisi Mercati - 09/11/2026\n\nOggi le borse hanno avuto una bella giornata, soprattutto l'S&P 500 che è salito del 2,29%, come se gli investitori avessero ritrovato l'ottimismo dopo giorni difficili. Però se guardi le ultime settimane, il vero problema è il crollo dell'energia e delle criptovalute: il petrolio è crollato quasi del 10% e Bitcoin ha perso quasi il 10%, come se fosse scoppiata una bolla. L'oro invece è l'unico rifugio sicuro, in salita grazie alle persone che cercano protezione dalle incertezze economiche.",
+  "generated_at": "Tuesday 10 November 2026 – 00:55",
+  "session": "apertura",
+  "commentary": "# Analisi Mercati - 10 Novembre 2026\n\nOggi il mercato azionario americano è in forma con un balzo del 2,35%, come una squadra che vince una partita importante dopo giorni difficili. Però i metalli preziosi come oro e argento brillano ancora di più, salendo rispettivamente dell'1,83% e 3,19%: questo succede quando gli investitori hanno paura e cercano rifugio in cose concrete e sicure, proprio come mettere i soldi sotto il materasso. Il petrolio invece crolla del 4,90% perché l'economia mondiale sta rallentando.",
   "assets": [
     {
       "symbol": "^GSPC",
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7545.58,
+      "current": 7549.94,
       "currency": "USD",
-      "day_pct": 2.29,
-      "week_pct": 0.06,
-      "month_pct": -3.4
+      "day_pct": 2.35,
+      "week_pct": 0.11,
+      "month_pct": -3.3
     },
     {
       "symbol": "IWDA.AS",
@@ -63,77 +63,77 @@
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 87.6,
+      "current": 86.38,
       "currency": "USD",
-      "day_pct": -3.56,
-      "week_pct": -9.19,
-      "month_pct": -4.63
+      "day_pct": -4.9,
+      "week_pct": -10.45,
+      "month_pct": -5.96
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 4112.9,
+      "current": 4149.5,
       "currency": "USD",
-      "day_pct": 0.93,
-      "week_pct": 3.61,
-      "month_pct": -2.45
+      "day_pct": 1.83,
+      "week_pct": 4.53,
+      "month_pct": -1.58
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 52.695,
+      "current": 53.455,
       "currency": "USD",
-      "day_pct": 1.72,
-      "week_pct": 3.89,
-      "month_pct": -13.14
+      "day_pct": 3.19,
+      "week_pct": 5.39,
+      "month_pct": -11.89
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 74521.05,
+      "current": 75175.35,
       "currency": "USD",
-      "day_pct": -0.09,
-      "week_pct": -7.32,
-      "month_pct": -9.72
+      "day_pct": 0.79,
+      "week_pct": -6.5,
+      "month_pct": -8.93
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 86.17,
+      "current": 86.78,
       "currency": "USD",
-      "day_pct": -0.08,
-      "week_pct": -9.76,
-      "month_pct": -21.05
+      "day_pct": 0.62,
+      "week_pct": -9.12,
+      "month_pct": -20.49
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1208,
+      "current": 1.1218,
       "currency": "USD",
-      "day_pct": -0.18,
-      "week_pct": 0.46,
-      "month_pct": -0.04
+      "day_pct": -0.09,
+      "week_pct": 0.55,
+      "month_pct": 0.04
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 4.88,
+      "current": 4.864,
       "currency": "USD",
-      "day_pct": 0.43,
-      "week_pct": -0.29,
-      "month_pct": -6.94
+      "day_pct": 0.1,
+      "week_pct": -0.61,
+      "month_pct": -7.25
     }
   ]
 }
