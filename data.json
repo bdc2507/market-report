@@ -1,18 +1,18 @@
 {
-  "generated_at": "Tuesday 17 November 2026 – 18:58",
+  "generated_at": "Tuesday 17 November 2026 – 23:37",
   "session": "chiusura",
-  "commentary": "# Analisi Mercati 17/11/2026\n\nOggi i mercati sono come un'altalena che scende: le azioni stanno perdendo valore e gli investitori hanno paura, soprattutto di quelle tecnologiche che crollano più delle altre. L'unica cosa che tiene bene è l'energia, che sale di prezzo come la benzina quando c'è scarsità. In parole semplici, è come se tutti stessero vendendo i loro giocattoli preferiti perché temono giorni brutti in arrivo.",
+  "commentary": "# Analisi Mercati - 17 Novembre 2026\n\nOggi i mercati sono un po' giù di morale, come quando piove e tutti sono un po' tristi. La cosa più preoccupante è che le criptovalute come Bitcoin stanno crollando da settimane (hanno perso un quinto del valore), mentre il petrolio sta diventando sempre più economico, segno che le persone comprano meno cose. L'unico lato positivo è che l'oro rimane stabile, come un amico fedele in cui fidarsi nei momenti difficili.",
   "assets": [
     {
       "symbol": "^GSPC",
       "name": "S&P 500",
       "category": "equity",
       "emoji": "🇺🇸",
-      "current": 7313.01,
+      "current": 7340.53,
       "currency": "USD",
-      "day_pct": -1.4,
-      "week_pct": -2.76,
-      "month_pct": -4.91
+      "day_pct": -1.03,
+      "week_pct": -2.4,
+      "month_pct": -4.55
     },
     {
       "symbol": "IWDA.AS",
@@ -52,88 +52,88 @@
       "name": "ENGR energy stock 600",
       "category": "equity",
       "emoji": "⚡",
-      "current": 113.44,
+      "current": 112.64,
       "currency": "EUR",
-      "day_pct": -0.23,
-      "week_pct": 3.05,
-      "month_pct": -2.59
+      "day_pct": -0.93,
+      "week_pct": 2.33,
+      "month_pct": -3.28
     },
     {
       "symbol": "CL=F",
       "name": "Petrolio WTI",
       "category": "commodity",
       "emoji": "🛢️",
-      "current": 86.63,
+      "current": 85.67,
       "currency": "USD",
-      "day_pct": 1.06,
-      "week_pct": 0.69,
-      "month_pct": -16.43
+      "day_pct": -0.06,
+      "week_pct": -0.43,
+      "month_pct": -17.35
     },
     {
       "symbol": "GC=F",
       "name": "Oro",
       "category": "commodity",
       "emoji": "🥇",
-      "current": 3870.0,
+      "current": 3855.4,
       "currency": "USD",
-      "day_pct": 0.44,
-      "week_pct": -3.97,
-      "month_pct": -6.97
+      "day_pct": 0.06,
+      "week_pct": -4.34,
+      "month_pct": -7.32
     },
     {
       "symbol": "SI=F",
       "name": "Argento",
       "category": "commodity",
       "emoji": "🥈",
-      "current": 47.5,
+      "current": 47.29,
       "currency": "USD",
-      "day_pct": 1.53,
-      "week_pct": -7.05,
-      "month_pct": -16.63
+      "day_pct": 1.08,
+      "week_pct": -7.46,
+      "month_pct": -17.0
     },
     {
       "symbol": "BTC-USD",
       "name": "Bitcoin",
       "category": "crypto",
       "emoji": "₿",
-      "current": 63439.74,
+      "current": 64499.77,
       "currency": "USD",
-      "day_pct": -2.18,
-      "week_pct": -11.08,
-      "month_pct": -22.05
+      "day_pct": -0.55,
+      "week_pct": -9.59,
+      "month_pct": -20.74
     },
     {
       "symbol": "SOL-USD",
       "name": "Solana",
       "category": "crypto",
       "emoji": "◎",
-      "current": 71.73,
+      "current": 73.74,
       "currency": "USD",
-      "day_pct": 0.31,
-      "week_pct": -12.16,
-      "month_pct": -30.57
+      "day_pct": 3.13,
+      "week_pct": -9.7,
+      "month_pct": -28.62
     },
     {
       "symbol": "EURUSD=X",
       "name": "EUR/USD",
       "category": "forex",
       "emoji": "💶",
-      "current": 1.1019,
+      "current": 1.1005,
       "currency": "USD",
-      "day_pct": -0.05,
-      "week_pct": -1.81,
-      "month_pct": -1.84
+      "day_pct": -0.18,
+      "week_pct": -1.94,
+      "month_pct": -1.96
     },
     {
       "symbol": "^TNX",
       "name": "Bond US 10Y",
       "category": "bond",
       "emoji": "📊",
-      "current": 5.097,
+      "current": 5.103,
       "currency": "USD",
-      "day_pct": -0.47,
-      "week_pct": 2.29,
-      "month_pct": -0.76
+      "day_pct": -0.35,
+      "week_pct": 2.41,
+      "month_pct": -0.64
     }
   ]
 }
